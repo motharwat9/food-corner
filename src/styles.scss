@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&family=Cairo:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap");
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+html {
+   font-size: 16px;
+}
+html ,button {
+   font-family: "Quicksand","sand-serif";
+}
+body {
+   margin: 0;
+}
+a {
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+}

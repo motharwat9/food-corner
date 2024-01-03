@@ -1,0 +1,16 @@
+@import '../../../../app.component.scss';
+.tags {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.tags a{
+   background:$main-colors;
+   padding: 0.3rem 1rem;
+   margin: 0.2rem 0.15rem;
+   border-radius: 10rem;
+   font-weight: 500;
+   cursor: pointer;
+   color: $text-color;
+   text-decoration: none;
+}

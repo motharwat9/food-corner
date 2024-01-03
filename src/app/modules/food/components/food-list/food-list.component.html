@@ -1,0 +1,25 @@
+<app-search></app-search>
+<app-tag [showAll]="true" [tags]="uniqueTags"></app-tag>
+<div class="cards">
+   <div class="card" *ngFor="let food of foods">
+      <a routerLink='/food/{{food?.id}}'>
+         <img [src]="food?.imageUrl " alt="{{food?.name}}" class="card-img">
+         <div class="card-content">
+            <div class="card-content-header">
+               <h5 class="name">{{food?.name}}</h5>
+               <h6 class="favorite {{food?.favorite?'':'not'}}">♥</h6>
+            </div>
+            <div class="rating">
+               <app-star-rating [stars]="food?.stars || 0" [size]="1.2"></app-star-rating>
+            </div>
+            <div class="product-content-footer">
+               <div class="origans">
+                  <span class="origan"*ngFor="let origan of food?.origins">{{origan}}</span>
+               </div>
+               <span class="time">🕐 {{food?.cookTime}}</span>
+               <h5 class="price">{{food?.price | currency}}</h5>
+            </div>
+         </div>
+      </a>
+   </div>
+</div>

@@ -1,0 +1,4 @@
+<div class="tags">
+   <a *ngIf="showAll" routerLink="/tags/All">All</a>
+   <a *ngFor="let tag of tags" routerLink="/tags/{{tag}}">{{tag}}</a>
+</div>
