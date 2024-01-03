@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { TagComponent } from './components/tag/tag.component';
 
 
-const material=[]
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,6 +21,7 @@ const material=[]
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    AppRoutingModule
     
     
   ],
