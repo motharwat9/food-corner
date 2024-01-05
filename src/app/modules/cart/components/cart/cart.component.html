@@ -1,0 +1,19 @@
+<div class="cart">
+   <ul class="cart-items">
+      <li class="cart-item" *ngFor="let item of cart.items">
+         <div><img [src]="item.food.imageUrl" alt=""></div>
+         <div><span>{{item.food.name}}</span></div>
+         <div><input type="number" class="cart-item-input" #inputValue [value]="item.quantity" (change)="changeQuantityOfItem(item,inputValue.value)"></div>
+         <div><span>{{item.food.price * item.quantity| currency}}</span></div>
+         <div><button class="remove-button" (click)="removeItem(item.food)">Remove</button></div>
+      </li>
+   </ul>
+   <div class="cheack-out">
+      <div>
+         <div class="foods-count">{{cart.totalCount}}</div>
+         <div class="total-price">{{cart.totalPrice |currency}}</div>
+      </div>
+      <button class="clear-Cart" (click)="clearCart()">clear cart</button>
+      <a>Proceed to Checkout</a>
+   </div>
+</div>

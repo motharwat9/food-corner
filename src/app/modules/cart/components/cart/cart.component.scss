@@ -1,0 +1,122 @@
+.cart{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 0.5rem;   
+   align-items: flex-start;
+   .cart-items{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex:3 0;
+      border: 1px solid #ffbbbb;
+      border-radius: 1rem;
+      list-style: none;
+      margin: 0.5rem;
+      padding: 0;
+      .cart-item {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         border-bottom: 1px solid #e4e4e4;
+         div{
+            padding: 0.9rem;
+         }
+         &:last-child{
+            border: none;
+         }
+         img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100rem;
+            object-fit: cover;
+         } 
+         .cart-item-input {
+            width: 5rem;
+            text-align: center;
+            border: 1px solid;
+            padding: 1px 5px;
+            outline: none;
+            border-radius: 25px;
+         }
+         .remove-button{
+            color: #e72929;
+            outline: none;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            opacity: 0.7;
+            &:hover{
+               cursor: pointer;
+               opacity: 1;
+            }
+         }
+      }
+      
+   }
+   .cheack-out {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 1 0;
+      border: 1px solid #ffbbbb;
+      height: 15rem;
+      border-radius: 1rem;
+      list-style: none;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      .foods-count {
+         margin-bottom: 1.5rem;
+         &::before{
+            content: 'Total Count : ';
+            color: grey;
+         }
+      }
+      .total-price{
+         &::before{
+            content: 'Total Price : ';
+            color: grey;
+         }
+      }
+      .clear-Cart{
+         background-color: #f1abab;
+         outline: none;
+         border: none;
+         padding: 0.5rem;
+         margin: 1rem;
+         border-radius: 10rem;
+         opacity: 0.8;
+         &:hover {
+            cursor: pointer;
+            opacity: 1;
+         }
+      }
+      a{
+         background: #e72929;
+         display: block;
+         width: 99%;
+         color: white;
+         text-align: center;
+         padding: 0.5rem;
+         border-radius: 1rem;
+         opacity: 0.7;
+         &:hover{
+            cursor: pointer;
+            opacity: 1;
+         }
+      }
+   }
+}
+
+
+li div:not(:first-child){
+   flex-basis: 19%;
+}
+
+@media (max-width:992px){
+   .cart {
+      flex-direction: column;
+      align-items: stretch;
+   }
+}

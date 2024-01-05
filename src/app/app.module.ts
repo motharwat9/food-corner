@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { FoodModule } from './modules/food/food.module';
+import { CartModule } from './modules/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FoodModule } from './modules/food/food.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FoodModule
+    FoodModule,
+    CartModule
     
   ],
   providers: [],

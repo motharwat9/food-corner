@@ -3,7 +3,7 @@
 <div class="cards">
    <div class="card" *ngFor="let food of foods">
       <a routerLink='/food/{{food?.id}}'>
-         <img [src]="food?.imageUrl " alt="{{food?.name}}" class="card-img">
+         <img [src]="food!.imageUrl " alt="{{food?.name}}" class="card-img">
          <div class="card-content">
             <div class="card-content-header">
                <h5 class="name">{{food?.name}}</h5>
