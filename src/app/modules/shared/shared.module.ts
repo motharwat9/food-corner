@@ -7,6 +7,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagComponent } from './components/tag/tag.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TagComponent } from './components/tag/tag.component';
     StarRatingComponent,
     SearchComponent,
     TagComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,7 @@ import { TagComponent } from './components/tag/tag.component';
     SearchComponent,
     FormsModule,
     TagComponent,
-    
+    NotFoundComponent
   ]
 })
 export class SharedModule { }

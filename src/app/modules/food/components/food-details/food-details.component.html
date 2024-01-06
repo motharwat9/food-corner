@@ -1,4 +1,6 @@
-<div class="food-Item">
+<app-not-found [Vasible]="!food"   notFoundMessage="Food Not Found"
+resetLinkText="Back To Home page"></app-not-found>
+<div class="food-Item" *ngIf="food">
    <img [src]="food.imageUrl" [alt]="food.name" class="food-Item-img">
    <div class="food-Item-content">
       <div class="food-Item-header">

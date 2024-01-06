@@ -1,4 +1,5 @@
-<div class="cart">
+<app-not-found [Vasible]="!cart || !cart.items.length" notFoundMessage="Cart Page Is Empty!"></app-not-found>
+<div class="cart" *ngIf="cart.items.length > 0">
    <ul class="cart-items">
       <li class="cart-item" *ngFor="let item of cart.items">
          <div><img [src]="item.food.imageUrl" alt=""></div>

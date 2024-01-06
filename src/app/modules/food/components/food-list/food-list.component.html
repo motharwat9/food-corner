@@ -1,5 +1,6 @@
 <app-search></app-search>
 <app-tag [showAll]="true" [tags]="uniqueTags"></app-tag>
+<app-not-found [Vasible]="!foods || !foods.length" resetLinkText="Reset Search"></app-not-found>
 <div class="cards">
    <div class="card" *ngFor="let food of foods">
       <a routerLink='/food/{{food?.id}}'>

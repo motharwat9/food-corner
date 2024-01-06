@@ -10,6 +10,7 @@ import { FoodService } from '../../services/food.service';
 })
 export class FoodListComponent implements OnInit {
   foods: Food[] = [];
+  AllFood :Food[] = [];
   tags: string[] = [];
   uniqueTags: string[] = [];
 
@@ -26,6 +27,7 @@ export class FoodListComponent implements OnInit {
   loadAllFoods() {
     this.foodService.getAllFoods().subscribe((res) => {
       this.foods = res;
+      this.AllFood = res;
 
       this.extractTagsFromFoods();
 
@@ -61,7 +63,7 @@ export class FoodListComponent implements OnInit {
     if (tagParams === 'All') {
       this.router.navigate(['/foods']);
     } else {
-      this.foods = this.foods.filter( (food)=> food.tags.includes(tagParams));
+      this.foods = this.AllFood.filter( (food)=> food.tags.includes(tagParams));
     }
   }
 }
