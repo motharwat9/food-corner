@@ -34,38 +34,6 @@ header {
                border-radius: 100rem;
             }
          }
-         .menu-container{
-            position: relative;
-            &:hover{
-               .menu{
-                  display: block;
-               }
-            }
-            .menu{
-               position: absolute;
-               background:whitesmoke;
-               border-radius: 15px;
-               display: none;
-               min-width: 7rem;
-               z-index: 1;
-
-               a{
-                  display: block;
-                  width: 100%;
-                  &:hover {
-                     &:first-child{
-                        border-radius: 15px 15px 0px 0px;
-                     }
-                     &:last-child{
-                        border-radius: 0px 0px 15px 15px;
-                     }
-                  }
-                  &:not(:last-child){
-                     border-bottom: 1px solid #e72929;
-                  }
-               }
-            }
-         }
       }
    }
    .active {
@@ -80,3 +48,4 @@ header {
       }
    }
 }
+

@@ -11,15 +11,9 @@
          <li>
             <a routerLink="/login" routerLinkActive="active" *ngIf="userIsLogged == null" >login</a>
          </li>
-         <li class="menu-container">
-            <a *ngIf="userIsLogged != null">{{userIsLogged.userName}}</a>
-            <div class="menu">
-               <a>Profile</a>
-               <a>Order</a>
-               <a (click)="logout()">logout</a>
-            </div>
-         </li>
          <li><a routerLink="/cart" routerLinkActive="active" *ngIf="userIsLogged != null">Cart<span>{{cartItemLingth}}</span></a></li>
+         <li> <a *ngIf="userIsLogged != null" (click)="logout()">Logout</a></li>
+
       </ul>
    </div>
 </header>
