@@ -1,0 +1,3 @@
+<ng-container *ngFor="let errorMessage of errorMessages" >
+   <small class="error-list" *ngIf="constrol.errors && constrol.touched">{{label}} {{errorMessages}}</small>
+</ng-container>

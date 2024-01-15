@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { FoodModule } from './modules/food/food.module';
 import { CartModule } from './modules/cart/cart.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CartModule } from './modules/cart/cart.module';
     AppRoutingModule,
     SharedModule,
     FoodModule,
-    CartModule
+    CartModule,
+    BrowserAnimationsModule,
+    AuthModule
     
   ],
   providers: [],

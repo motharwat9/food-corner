@@ -1,0 +1,12 @@
+
+<div [formGroup]="form" class="container">
+    <div [formArrayName]="arrayName">
+      <div class="form-group" *ngFor="let controlName of arrayControl.controls; let i = index; let isLast = last">
+      <label for="{{ label + i }}">{{ label }} #{{ i + 1 }}</label>
+      <input [type]="type" name="{{ label }}_{{ i + 1 }}" id="{{ label + i }}" class="form-control" formControlName="{{ i }}" />
+      <button type="button" class="btn btn-outline-warning me-1 mt-1"  [disabled] ="controlName.invalid" [hidden]="!isLast"  (click)="addAddress()">+</button>
+      <button type="button" class="btn btn-outline-warning me-1 mt-1" [hidden]="!isLast || !showDelBtn"  (click)="deleteFormArray(i)">-</button>
+      <app-input-validation [constrol]="controlName" [label]="label"></app-input-validation>
+    </div>
+  </div>
+</div>

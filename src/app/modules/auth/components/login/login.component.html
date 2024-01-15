@@ -1,0 +1,14 @@
+   <div class="card mx-auto col-sm-12 col-md-8 col-lg-6">
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+         <div class="card-header">
+            <app-title title="Login"></app-title>
+         </div>
+         <div class="card-body">
+            <app-text-input label="Email" type="email" [control]="fc['email']"></app-text-input>
+            <app-text-input label="Password" type="password" [control]="fc['password']" [showButton]="true"></app-text-input>
+         </div>
+         <div class="card-footer">
+            <default-button text="Login" type="submit" [form]="loginForm"></default-button>
+         </div>
+      </form>
+   </div>

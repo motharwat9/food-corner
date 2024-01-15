@@ -9,5 +9,5 @@ export class NotFoundComponent {
   @Input() Vasible:boolean=true;
   @Input() notFoundMessage = 'Nothing Found!';
   @Input() restLinkText = 'Go To Home';
-  @Input() restLinkRoute = '/'
+  @Input() restLinkRoute = '/foods'
 }

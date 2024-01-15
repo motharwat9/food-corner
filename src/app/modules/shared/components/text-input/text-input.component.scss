@@ -1,0 +1,29 @@
+.form-control:focus{
+   box-shadow: 0 0 0 0.25rem rgba(255, 218, 202, 0.14);
+   border-color: #f6e5de;
+}
+
+
+input::placeholder{
+color: #dfdfdf;
+font-size: 0.95rem;
+}
+
+input:focus{
+border-width: 2.9px;
+}
+
+.hide-button {
+   position: absolute;
+   border: none;
+   background: transparent;
+   z-index: 1;
+   top: 55px;
+   right: 28px;
+   translate: -50% -50%;
+   color: #ff4800;
+   opacity: 0.6;
+   &:hover{
+      opacity: 1;
+   }
+}

@@ -12,7 +12,7 @@ import { CartItem } from 'src/app/modules/shared/models/cartItem';
 export class CartComponent implements OnInit {
   cart!:Cart;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService ) {}
 
   ngOnInit(): void {
     this.cartService.getCartObservable().subscribe(res=>{
@@ -22,6 +22,9 @@ export class CartComponent implements OnInit {
 
   removeItem(food: Food) {
     this.cartService.removeItem(food);
+    if(this.cart.items.length <= 0){
+      this.clearCart()
+    }
   }
 
   changeQuantityOfItem(food: CartItem, inputValue: string) {
@@ -29,6 +32,9 @@ export class CartComponent implements OnInit {
 
     if(value <= 0) {
       this.removeItem(food.food);
+      if(this.cart.items.length <= 0){
+        this.clearCart()
+      }
     } else {
       this.cartService.changeQuantity(food, value);
     }

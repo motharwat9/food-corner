@@ -1,0 +1,11 @@
+.card {
+   margin-top: 50px;
+   .card-header{
+      background-color: rgb(255, 235, 232);
+      text-align: center;
+   }
+   .card-footer {
+      text-align: end;
+      background-color: rgb(255, 235, 232);
+   }
+}

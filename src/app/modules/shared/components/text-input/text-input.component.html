@@ -1,0 +1,8 @@
+<app-input-container [label]="label">
+   <input  class="form-control" [type]="type" *ngIf="!showButton" [formControl]="formControl" [class.is-invalid]="control.invalid && control.touched" [class.is-valid]="!control.errors " [id]="label" [name]="label">
+   <input  class="form-control" [type]="hidePassword?'password':'text'" *ngIf="showButton" [formControl]="formControl" [class.is-invalid]="control.invalid && control.touched" [class.is-valid]="!control.errors " [id]="label" [name]="label" >
+   <button class="hide-button" type="button" mat-icon-button  (click)="hidePassword = !hidePassword" *ngIf="showButton">
+      <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+   </button> 
+   <app-input-validation [constrol]="control" [label]="label" ></app-input-validation>
+</app-input-container>

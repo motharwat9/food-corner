@@ -1,0 +1,38 @@
+<div class="card mx-auto col-sm-12 col-md-10 col-lg-8 col-xl-6">
+   <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div class="card-header">
+         <app-title title="Register"></app-title>
+      </div>
+      <div class="card-body">
+         <app-text-input
+         label="User Name"
+         [control]="fc['userName']"
+         ></app-text-input>
+         <app-text-input
+         label="Email"
+         [control]="fc['email']"
+         type="email"
+         ></app-text-input>
+         <app-text-input
+         label="Password"
+         [control]="fc['password']"
+         [showButton]="true"
+         ></app-text-input>
+         <app-text-input
+         label="Confirm Password"
+         [control]="fc['confirmPassword']"
+         [showButton]="true"
+         ></app-text-input>
+         <app-control-array
+         [form]="registerForm"
+         arrayName="address"
+         [control]="fc['address']"
+         label="address"
+         ></app-control-array>
+      </div>
+      <div class="card-footer">
+         <default-button text="Regiser" type="submit" [form]="registerForm"></default-button>
+      </div>
+   </form>
+</div>
+

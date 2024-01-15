@@ -3,18 +3,23 @@
       <a class="logo">Tc food Corner</a>
       <ul >
          <li>
-            <a  routerLink="/foods" routerLinkActive="active" >Home</a>
+            <a  routerLink="/foods"  routerLinkActive="active" *ngIf="userIsLogged != null">Home</a>
          </li>
-         <li><a>login</a></li>
+         <li>
+            <a  routerLink="/register" routerLinkActive="active" *ngIf="userIsLogged == null"   >Register</a>
+         </li>
+         <li>
+            <a routerLink="/login" routerLinkActive="active" *ngIf="userIsLogged == null" >login</a>
+         </li>
          <li class="menu-container">
-            <a>mohamed</a>
+            <a *ngIf="userIsLogged != null">{{userIsLogged.userName}}</a>
             <div class="menu">
                <a>Profile</a>
                <a>Order</a>
-               <a>logout</a>
+               <a (click)="logout()">logout</a>
             </div>
          </li>
-         <li><a routerLink="/cart" routerLinkActive="active">Cart<span>{{cartItemLingth}}</span></a></li>
+         <li><a routerLink="/cart" routerLinkActive="active" *ngIf="userIsLogged != null">Cart<span>{{cartItemLingth}}</span></a></li>
       </ul>
    </div>
 </header>
